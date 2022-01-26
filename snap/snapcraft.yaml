@@ -1,0 +1,35 @@
+# Generated with JReleaser 1.0.0-M1 at 2022-01-25T17:41:29.965632-08:00
+name: kobweb
+version: 0.9.2
+summary: Kobweb CLI provides commands to handle the tedious parts of building a Compose for Web app
+description: |
+  Kobweb CLI provides commands to handle the tedious parts of building a Compose for Web app, including
+  project setup and configuration.
+
+grade: stable
+confinement: strict
+base: core20
+type: app
+
+apps:
+  kobweb:
+    command: $SNAP/bin/kobweb
+    environment:
+      JAVA_HOME: "$SNAP/usr/lib/jvm/java/jre/"
+      PATH: "$SNAP/bin:$PATH:$SNAP/usr/lib/jvm/java/jre/bin"
+    plugs:
+      - network
+
+parts:
+  kobweb:
+    plugin: dump
+    source: https://github.com/varabyte/kobweb/releases/download/cli-v0.9.2/kobweb-0.9.2.tar
+    source-checksum: sha256/a91aedba30a142390780b31ff0584db43c9d440051fa2bdbfd77f91e637381d5
+    stage-packages:
+      - curl
+      - openjdk-11-jre
+      - ca-certificates
+      - ca-certificates-java
+    prime:
+      - -usr/lib/jvm/java-*/lib/security/cacerts
+      - -usr/lib/jvm/java-*/jre/lib/security/cacerts
