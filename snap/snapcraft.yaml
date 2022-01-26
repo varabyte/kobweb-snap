@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.0.0-M1 at 2022-01-25T17:59:14.6677-08:00
+# Generated with JReleaser 1.0.0-M1 at 2022-01-25T18:07:05.82198-08:00
 name: kobweb
 version: 0.9.2
 summary: Help setup and manage your Compose for Web app
@@ -28,7 +28,7 @@ parts:
   kobweb:
     plugin: dump
     source: https://github.com/varabyte/kobweb/releases/download/cli-v0.9.2/kobweb-0.9.2.tar
-    source-checksum: sha256/a91aedba30a142390780b31ff0584db43c9d440051fa2bdbfd77f91e637381d5
+    source-checksum: sha256/e04fce6fe59c16fae37cf87d76be0d8642b3670f647b141d939e47c54abb128e
     stage-packages:
       - curl
       - openjdk-11-jre
