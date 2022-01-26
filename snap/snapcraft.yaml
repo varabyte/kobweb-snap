@@ -19,8 +19,8 @@ apps:
   kobweb:
     command: $SNAP/bin/kobweb
     environment:
-      JAVA_HOME: "$SNAP/usr/lib/jvm/java/jre/"
-      PATH: "$SNAP/bin:$PATH:$SNAP/usr/lib/jvm/java/jre/bin"
+      JAVA_HOME: "$SNAP/usr/lib/jvm/java-11-openjdk-${SNAP_ARCH}/jre/"
+      PATH: "$SNAP/bin:$PATH:$SNAP/usr/lib/jvm/java-11-openjdk-${SNAP_ARCH}/jre/bin"
     plugs:
       - network
 
