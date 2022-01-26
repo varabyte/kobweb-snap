@@ -1,7 +1,7 @@
-# Generated with JReleaser 1.0.0-M1 at 2022-01-25T17:41:29.965632-08:00
+# Generated with JReleaser 1.0.0-M1 at 2022-01-25T17:59:14.6677-08:00
 name: kobweb
 version: 0.9.2
-summary: Kobweb CLI provides commands to handle the tedious parts of building a Compose for Web app
+summary: Help setup and manage your Compose for Web app
 description: |
   Kobweb CLI provides commands to handle the tedious parts of building a Compose for Web app, including
   project setup and configuration.
@@ -11,6 +11,10 @@ confinement: strict
 base: core20
 type: app
 
+architectures:
+  - build-on: [amd64]
+    
+    
 apps:
   kobweb:
     command: $SNAP/bin/kobweb
